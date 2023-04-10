@@ -77,7 +77,6 @@ public:
             p = p->next;
         }
     }
-
     void update(int index, int data) {    // 更新
         if (index < 0 || index >= this->length() || this->is_empty()) {  // 判断是否越界
             return;
@@ -93,7 +92,6 @@ public:
             p = p->next;
         }
     }
-
     void remove(int index) {  // 删除
         if (index < 0 || index >= this->length() || this->is_empty()) {  // 判断是否越界
             return;
@@ -152,20 +150,15 @@ public:
 private:
     LinkNode *head; // 头指针
     LinkNode *tail; // 尾指针
-
 };
 
 
 int main() {
-//    int n;
-//    std::cin>>n;
-//    LinkList *linkList = new LinkList;
-//    linkList->print();
-//
-//    delete linkList;
-
-
     LinkList *linkList = new LinkList;
+    int n;
+    std::cin >> n;
+    // 反正弦泰勒展开式 arcsin(1) = pi/2 = sum((2n-
+    delete linkList;
     return 0;
 }
 
