@@ -1,0 +1,4 @@
+C:\Code\cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S C:\Users\WeiZixiang\Desktop\Data-structure-experiments -B C:\Users\WeiZixiang\Desktop\Data-structure-experiments\cmake-build-debug
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/WeiZixiang/Desktop/Data-structure-experiments/cmake-build-debug

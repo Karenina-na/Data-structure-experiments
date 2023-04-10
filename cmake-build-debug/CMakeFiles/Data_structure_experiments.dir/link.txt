@@ -1,0 +1,3 @@
+C:\Code\cmake\bin\cmake.exe -E rm -f CMakeFiles\Data_structure_experiments.dir/objects.a
+C:\Code\MinGW-64\bin\ar.exe qc CMakeFiles\Data_structure_experiments.dir/objects.a @CMakeFiles\Data_structure_experiments.dir\objects1
+C:\Code\MinGW-64\bin\c++.exe -g -Wl,--whole-archive CMakeFiles\Data_structure_experiments.dir/objects.a -Wl,--no-whole-archive -o Data_structure_experiments.exe -Wl,--out-implib,libData_structure_experiments.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Data_structure_experiments.dir\linkLibs.rsp
