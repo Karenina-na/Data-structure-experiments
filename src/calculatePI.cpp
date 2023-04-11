@@ -1,7 +1,7 @@
 //
 // Created by 15399 on 2023/4/11.
 //
-#include "Function.h"
+#include "../include/Function.h"
 // 链表节点
 struct LinkNode {
     int data;

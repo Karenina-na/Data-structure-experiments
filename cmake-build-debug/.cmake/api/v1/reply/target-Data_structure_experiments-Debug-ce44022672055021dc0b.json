@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Data_structure_experiments.exe"
+			"path" : "D:/code/c++/Data-structure-experiments/bin/Data_structure_experiments.exe"
 		},
 		{
-			"path" : "Data_structure_experiments.pdb"
+			"path" : "D:/code/c++/Data-structure-experiments/bin/Data_structure_experiments.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -13,7 +13,8 @@
 	{
 		"commands" : 
 		[
-			"add_executable"
+			"add_executable",
+			"include_directories"
 		],
 		"files" : 
 		[
@@ -27,7 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 6,
+				"line" : 19,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 16,
 				"parent" : 0
 			}
 		]
@@ -39,23 +46,21 @@
 			[
 				{
 					"fragment" : "-g -fdiagnostics-color=always"
-				},
+				}
+			],
+			"includes" : 
+			[
 				{
-					"fragment" : "-std=gnu++23"
+					"backtrace" : 2,
+					"path" : "D:/code/c++/Data-structure-experiments/include"
 				}
 			],
 			"language" : "CXX",
-			"languageStandard" : 
-			{
-				"backtraces" : 
-				[
-					1
-				],
-				"standard" : "23"
-			},
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1,
+				2
 			]
 		}
 	],
@@ -92,7 +97,9 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1,
+				2
 			]
 		}
 	],
@@ -102,6 +109,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/calculatePI.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/merge.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

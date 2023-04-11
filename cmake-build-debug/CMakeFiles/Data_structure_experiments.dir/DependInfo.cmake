@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "D:/code/c++/Data-structure-experiments/calculatePI.cpp" "CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.obj" "gcc" "CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.obj.d"
   "D:/code/c++/Data-structure-experiments/main.cpp" "CMakeFiles/Data_structure_experiments.dir/main.cpp.obj" "gcc" "CMakeFiles/Data_structure_experiments.dir/main.cpp.obj.d"
-  "D:/code/c++/Data-structure-experiments/merge.cpp" "CMakeFiles/Data_structure_experiments.dir/merge.cpp.obj" "gcc" "CMakeFiles/Data_structure_experiments.dir/merge.cpp.obj.d"
+  "D:/code/c++/Data-structure-experiments/src/calculatePI.cpp" "CMakeFiles/Data_structure_experiments.dir/src/calculatePI.cpp.obj" "gcc" "CMakeFiles/Data_structure_experiments.dir/src/calculatePI.cpp.obj.d"
+  "D:/code/c++/Data-structure-experiments/src/merge.cpp" "CMakeFiles/Data_structure_experiments.dir/src/merge.cpp.obj" "gcc" "CMakeFiles/Data_structure_experiments.dir/src/merge.cpp.obj.d"
   )
 
 # Targets to which this target links.

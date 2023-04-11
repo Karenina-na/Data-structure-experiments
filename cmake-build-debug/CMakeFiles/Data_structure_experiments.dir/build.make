@@ -69,68 +69,71 @@ include CMakeFiles/Data_structure_experiments.dir/progress.make
 include CMakeFiles/Data_structure_experiments.dir/flags.make
 
 CMakeFiles/Data_structure_experiments.dir/main.cpp.obj: CMakeFiles/Data_structure_experiments.dir/flags.make
+CMakeFiles/Data_structure_experiments.dir/main.cpp.obj: CMakeFiles/Data_structure_experiments.dir/includes_CXX.rsp
 CMakeFiles/Data_structure_experiments.dir/main.cpp.obj: D:/code/c++/Data-structure-experiments/main.cpp
 CMakeFiles/Data_structure_experiments.dir/main.cpp.obj: CMakeFiles/Data_structure_experiments.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\code\c++\Data-structure-experiments\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Data_structure_experiments.dir/main.cpp.obj"
-	D:\Environment\MinGW-64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Data_structure_experiments.dir/main.cpp.obj -MF CMakeFiles\Data_structure_experiments.dir\main.cpp.obj.d -o CMakeFiles\Data_structure_experiments.dir\main.cpp.obj -c D:\code\c++\Data-structure-experiments\main.cpp
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Data_structure_experiments.dir/main.cpp.obj -MF CMakeFiles\Data_structure_experiments.dir\main.cpp.obj.d -o CMakeFiles\Data_structure_experiments.dir\main.cpp.obj -c D:\code\c++\Data-structure-experiments\main.cpp
 
 CMakeFiles/Data_structure_experiments.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Data_structure_experiments.dir/main.cpp.i"
-	D:\Environment\MinGW-64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\c++\Data-structure-experiments\main.cpp > CMakeFiles\Data_structure_experiments.dir\main.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\c++\Data-structure-experiments\main.cpp > CMakeFiles\Data_structure_experiments.dir\main.cpp.i
 
 CMakeFiles/Data_structure_experiments.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Data_structure_experiments.dir/main.cpp.s"
-	D:\Environment\MinGW-64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\c++\Data-structure-experiments\main.cpp -o CMakeFiles\Data_structure_experiments.dir\main.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\c++\Data-structure-experiments\main.cpp -o CMakeFiles\Data_structure_experiments.dir\main.cpp.s
 
-CMakeFiles/Data_structure_experiments.dir/merge.cpp.obj: CMakeFiles/Data_structure_experiments.dir/flags.make
-CMakeFiles/Data_structure_experiments.dir/merge.cpp.obj: D:/code/c++/Data-structure-experiments/merge.cpp
-CMakeFiles/Data_structure_experiments.dir/merge.cpp.obj: CMakeFiles/Data_structure_experiments.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\code\c++\Data-structure-experiments\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Data_structure_experiments.dir/merge.cpp.obj"
-	D:\Environment\MinGW-64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Data_structure_experiments.dir/merge.cpp.obj -MF CMakeFiles\Data_structure_experiments.dir\merge.cpp.obj.d -o CMakeFiles\Data_structure_experiments.dir\merge.cpp.obj -c D:\code\c++\Data-structure-experiments\merge.cpp
+CMakeFiles/Data_structure_experiments.dir/src/calculatePI.cpp.obj: CMakeFiles/Data_structure_experiments.dir/flags.make
+CMakeFiles/Data_structure_experiments.dir/src/calculatePI.cpp.obj: CMakeFiles/Data_structure_experiments.dir/includes_CXX.rsp
+CMakeFiles/Data_structure_experiments.dir/src/calculatePI.cpp.obj: D:/code/c++/Data-structure-experiments/src/calculatePI.cpp
+CMakeFiles/Data_structure_experiments.dir/src/calculatePI.cpp.obj: CMakeFiles/Data_structure_experiments.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\code\c++\Data-structure-experiments\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Data_structure_experiments.dir/src/calculatePI.cpp.obj"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Data_structure_experiments.dir/src/calculatePI.cpp.obj -MF CMakeFiles\Data_structure_experiments.dir\src\calculatePI.cpp.obj.d -o CMakeFiles\Data_structure_experiments.dir\src\calculatePI.cpp.obj -c D:\code\c++\Data-structure-experiments\src\calculatePI.cpp
 
-CMakeFiles/Data_structure_experiments.dir/merge.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Data_structure_experiments.dir/merge.cpp.i"
-	D:\Environment\MinGW-64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\c++\Data-structure-experiments\merge.cpp > CMakeFiles\Data_structure_experiments.dir\merge.cpp.i
+CMakeFiles/Data_structure_experiments.dir/src/calculatePI.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Data_structure_experiments.dir/src/calculatePI.cpp.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\c++\Data-structure-experiments\src\calculatePI.cpp > CMakeFiles\Data_structure_experiments.dir\src\calculatePI.cpp.i
 
-CMakeFiles/Data_structure_experiments.dir/merge.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Data_structure_experiments.dir/merge.cpp.s"
-	D:\Environment\MinGW-64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\c++\Data-structure-experiments\merge.cpp -o CMakeFiles\Data_structure_experiments.dir\merge.cpp.s
+CMakeFiles/Data_structure_experiments.dir/src/calculatePI.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Data_structure_experiments.dir/src/calculatePI.cpp.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\c++\Data-structure-experiments\src\calculatePI.cpp -o CMakeFiles\Data_structure_experiments.dir\src\calculatePI.cpp.s
 
-CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.obj: CMakeFiles/Data_structure_experiments.dir/flags.make
-CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.obj: D:/code/c++/Data-structure-experiments/calculatePI.cpp
-CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.obj: CMakeFiles/Data_structure_experiments.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\code\c++\Data-structure-experiments\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.obj"
-	D:\Environment\MinGW-64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.obj -MF CMakeFiles\Data_structure_experiments.dir\calculatePI.cpp.obj.d -o CMakeFiles\Data_structure_experiments.dir\calculatePI.cpp.obj -c D:\code\c++\Data-structure-experiments\calculatePI.cpp
+CMakeFiles/Data_structure_experiments.dir/src/merge.cpp.obj: CMakeFiles/Data_structure_experiments.dir/flags.make
+CMakeFiles/Data_structure_experiments.dir/src/merge.cpp.obj: CMakeFiles/Data_structure_experiments.dir/includes_CXX.rsp
+CMakeFiles/Data_structure_experiments.dir/src/merge.cpp.obj: D:/code/c++/Data-structure-experiments/src/merge.cpp
+CMakeFiles/Data_structure_experiments.dir/src/merge.cpp.obj: CMakeFiles/Data_structure_experiments.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\code\c++\Data-structure-experiments\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Data_structure_experiments.dir/src/merge.cpp.obj"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Data_structure_experiments.dir/src/merge.cpp.obj -MF CMakeFiles\Data_structure_experiments.dir\src\merge.cpp.obj.d -o CMakeFiles\Data_structure_experiments.dir\src\merge.cpp.obj -c D:\code\c++\Data-structure-experiments\src\merge.cpp
 
-CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.i"
-	D:\Environment\MinGW-64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\c++\Data-structure-experiments\calculatePI.cpp > CMakeFiles\Data_structure_experiments.dir\calculatePI.cpp.i
+CMakeFiles/Data_structure_experiments.dir/src/merge.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Data_structure_experiments.dir/src/merge.cpp.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\c++\Data-structure-experiments\src\merge.cpp > CMakeFiles\Data_structure_experiments.dir\src\merge.cpp.i
 
-CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.s"
-	D:\Environment\MinGW-64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\c++\Data-structure-experiments\calculatePI.cpp -o CMakeFiles\Data_structure_experiments.dir\calculatePI.cpp.s
+CMakeFiles/Data_structure_experiments.dir/src/merge.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Data_structure_experiments.dir/src/merge.cpp.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\c++\Data-structure-experiments\src\merge.cpp -o CMakeFiles\Data_structure_experiments.dir\src\merge.cpp.s
 
 # Object files for target Data_structure_experiments
 Data_structure_experiments_OBJECTS = \
 "CMakeFiles/Data_structure_experiments.dir/main.cpp.obj" \
-"CMakeFiles/Data_structure_experiments.dir/merge.cpp.obj" \
-"CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.obj"
+"CMakeFiles/Data_structure_experiments.dir/src/calculatePI.cpp.obj" \
+"CMakeFiles/Data_structure_experiments.dir/src/merge.cpp.obj"
 
 # External object files for target Data_structure_experiments
 Data_structure_experiments_EXTERNAL_OBJECTS =
 
-Data_structure_experiments.exe: CMakeFiles/Data_structure_experiments.dir/main.cpp.obj
-Data_structure_experiments.exe: CMakeFiles/Data_structure_experiments.dir/merge.cpp.obj
-Data_structure_experiments.exe: CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.obj
-Data_structure_experiments.exe: CMakeFiles/Data_structure_experiments.dir/build.make
-Data_structure_experiments.exe: CMakeFiles/Data_structure_experiments.dir/linkLibs.rsp
-Data_structure_experiments.exe: CMakeFiles/Data_structure_experiments.dir/objects1
-Data_structure_experiments.exe: CMakeFiles/Data_structure_experiments.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\code\c++\Data-structure-experiments\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Data_structure_experiments.exe"
+D:/code/c++/Data-structure-experiments/bin/Data_structure_experiments.exe: CMakeFiles/Data_structure_experiments.dir/main.cpp.obj
+D:/code/c++/Data-structure-experiments/bin/Data_structure_experiments.exe: CMakeFiles/Data_structure_experiments.dir/src/calculatePI.cpp.obj
+D:/code/c++/Data-structure-experiments/bin/Data_structure_experiments.exe: CMakeFiles/Data_structure_experiments.dir/src/merge.cpp.obj
+D:/code/c++/Data-structure-experiments/bin/Data_structure_experiments.exe: CMakeFiles/Data_structure_experiments.dir/build.make
+D:/code/c++/Data-structure-experiments/bin/Data_structure_experiments.exe: CMakeFiles/Data_structure_experiments.dir/linkLibs.rsp
+D:/code/c++/Data-structure-experiments/bin/Data_structure_experiments.exe: CMakeFiles/Data_structure_experiments.dir/objects1
+D:/code/c++/Data-structure-experiments/bin/Data_structure_experiments.exe: CMakeFiles/Data_structure_experiments.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\code\c++\Data-structure-experiments\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable D:\code\c++\Data-structure-experiments\bin\Data_structure_experiments.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Data_structure_experiments.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Data_structure_experiments.dir/build: Data_structure_experiments.exe
+CMakeFiles/Data_structure_experiments.dir/build: D:/code/c++/Data-structure-experiments/bin/Data_structure_experiments.exe
 .PHONY : CMakeFiles/Data_structure_experiments.dir/build
 
 CMakeFiles/Data_structure_experiments.dir/clean:

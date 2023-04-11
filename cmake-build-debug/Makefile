@@ -128,30 +128,6 @@ Data_structure_experiments/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/build
 .PHONY : Data_structure_experiments/fast
 
-calculatePI.obj: calculatePI.cpp.obj
-.PHONY : calculatePI.obj
-
-# target to build an object file
-calculatePI.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.obj
-.PHONY : calculatePI.cpp.obj
-
-calculatePI.i: calculatePI.cpp.i
-.PHONY : calculatePI.i
-
-# target to preprocess a source file
-calculatePI.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.i
-.PHONY : calculatePI.cpp.i
-
-calculatePI.s: calculatePI.cpp.s
-.PHONY : calculatePI.s
-
-# target to generate assembly for a file
-calculatePI.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.s
-.PHONY : calculatePI.cpp.s
-
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -176,29 +152,53 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-merge.obj: merge.cpp.obj
-.PHONY : merge.obj
+src/calculatePI.obj: src/calculatePI.cpp.obj
+.PHONY : src/calculatePI.obj
 
 # target to build an object file
-merge.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/merge.cpp.obj
-.PHONY : merge.cpp.obj
+src/calculatePI.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/src/calculatePI.cpp.obj
+.PHONY : src/calculatePI.cpp.obj
 
-merge.i: merge.cpp.i
-.PHONY : merge.i
+src/calculatePI.i: src/calculatePI.cpp.i
+.PHONY : src/calculatePI.i
 
 # target to preprocess a source file
-merge.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/merge.cpp.i
-.PHONY : merge.cpp.i
+src/calculatePI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/src/calculatePI.cpp.i
+.PHONY : src/calculatePI.cpp.i
 
-merge.s: merge.cpp.s
-.PHONY : merge.s
+src/calculatePI.s: src/calculatePI.cpp.s
+.PHONY : src/calculatePI.s
 
 # target to generate assembly for a file
-merge.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/merge.cpp.s
-.PHONY : merge.cpp.s
+src/calculatePI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/src/calculatePI.cpp.s
+.PHONY : src/calculatePI.cpp.s
+
+src/merge.obj: src/merge.cpp.obj
+.PHONY : src/merge.obj
+
+# target to build an object file
+src/merge.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/src/merge.cpp.obj
+.PHONY : src/merge.cpp.obj
+
+src/merge.i: src/merge.cpp.i
+.PHONY : src/merge.i
+
+# target to preprocess a source file
+src/merge.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/src/merge.cpp.i
+.PHONY : src/merge.cpp.i
+
+src/merge.s: src/merge.cpp.s
+.PHONY : src/merge.s
+
+# target to generate assembly for a file
+src/merge.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/src/merge.cpp.s
+.PHONY : src/merge.cpp.s
 
 # Help Target
 help:
@@ -209,15 +209,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Data_structure_experiments
-	@echo ... calculatePI.obj
-	@echo ... calculatePI.i
-	@echo ... calculatePI.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... merge.obj
-	@echo ... merge.i
-	@echo ... merge.s
+	@echo ... src/calculatePI.obj
+	@echo ... src/calculatePI.i
+	@echo ... src/calculatePI.s
+	@echo ... src/merge.obj
+	@echo ... src/merge.i
+	@echo ... src/merge.s
 .PHONY : help
 
 

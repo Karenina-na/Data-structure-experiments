@@ -2,7 +2,7 @@
 // Created by 15399 on 2023/4/11.
 //
 // 合并有序数组
-#include "Function.h"
+#include "../include/Function.h"
 void merge() {
     // 读入两个数组
     int n;

@@ -1,7 +1,19 @@
 cmake_minimum_required(VERSION 3.25)
+
 project(Data_structure_experiments)
 
-set(CMAKE_CXX_STANDARD 23)
+# 编译器
+set(CMAKE_CXX_COMPILER "g++")
+set(CMAKE_C_COMPILER "gcc")
 
-add_executable(Data_structure_experiments main.cpp merge.cpp calculatePI.cpp)
+# 编译路径
+set (EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
+# 添加源文件
+aux_source_directory (src SRC_LIST)
+
+# 添加头文件目录
+include_directories(include)
+
+# 添加可执行文件
+add_executable(Data_structure_experiments main.cpp ${SRC_LIST})
