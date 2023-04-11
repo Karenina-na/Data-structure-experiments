@@ -17,6 +17,15 @@ public:
         this->tail = nullptr;
     }
 
+    LinkList(int data) {
+        LinkNode *p = new LinkNode;
+        p->data = data;
+        p->next = nullptr;
+        p->prior = nullptr;
+        this->head = p;
+        this->tail = p;
+    }
+
     ~LinkList() {  // 析构函数
         LinkNode *p = head;
         while (p != nullptr) {
@@ -147,6 +156,14 @@ public:
         }
     }
 
+    LinkNode *getHead() {
+        return this->head;
+    }
+
+    LinkNode *getTail() {
+        return this->tail;
+    }
+
 private:
     LinkNode *head; // 头指针
     LinkNode *tail; // 尾指针
@@ -154,11 +171,25 @@ private:
 
 
 int main() {
-    LinkList *linkList = new LinkList;
+    LinkList *result = new LinkList(2);
     int n;
     std::cin >> n;
-    // 反正弦泰勒展开式 arcsin(1) = pi/2 = sum((2n-
-    delete linkList;
+    // 反正弦泰勒展开式 p(n+1) = p(n) * n/(2n+1), arcsin(1) = sum(p(n)) = pi/2
+    for (int i = 0; i < n; i++) {
+        result->append(0);
+        temp->append(0);
+    }
+    int ret;
+    LinkList *temp = new LinkList(2);
+    // 递归运算
+    for (int i = 2; i < 10000; ++i) {
+        ret = 0;
+        int bottom = 2 * i + 1;
+        int top = i;
+        // 乘法 p(n) * n
+        LinkNode *p = temp->get
+    }
+    delete result;
     return 0;
 }
 
