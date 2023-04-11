@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Code\cmake\bin\cmake.exe
+CMAKE_COMMAND = D:\Environment\cmake\bin\cmake.exe
 
 # The command to remove a file.
-RM = C:\Code\cmake\bin\cmake.exe -E rm -f
+RM = D:\Environment\cmake\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\WeiZixiang\Desktop\Data-structure-experiments
+CMAKE_SOURCE_DIR = D:\code\c++\Data-structure-experiments
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\WeiZixiang\Desktop\Data-structure-experiments\cmake-build-debug
+CMAKE_BINARY_DIR = D:\code\c++\Data-structure-experiments\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = C:\Users\WeiZixiang\Desktop\Data-structure-experiments\cmake-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	C:\Code\cmake\bin\cmake-gui.exe -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	D:\Environment\cmake\bin\cmake-gui.exe -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	C:\Code\cmake\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	D:\Environment\cmake\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\WeiZixiang\Desktop\Data-structure-experiments\cmake-build-debug\CMakeFiles C:\Users\WeiZixiang\Desktop\Data-structure-experiments\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\code\c++\Data-structure-experiments\cmake-build-debug\CMakeFiles D:\code\c++\Data-structure-experiments\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\WeiZixiang\Desktop\Data-structure-experiments\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\code\c++\Data-structure-experiments\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,30 @@ Data_structure_experiments/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/build
 .PHONY : Data_structure_experiments/fast
 
+calculatePI.obj: calculatePI.cpp.obj
+.PHONY : calculatePI.obj
+
+# target to build an object file
+calculatePI.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.obj
+.PHONY : calculatePI.cpp.obj
+
+calculatePI.i: calculatePI.cpp.i
+.PHONY : calculatePI.i
+
+# target to preprocess a source file
+calculatePI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.i
+.PHONY : calculatePI.cpp.i
+
+calculatePI.s: calculatePI.cpp.s
+.PHONY : calculatePI.s
+
+# target to generate assembly for a file
+calculatePI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/calculatePI.cpp.s
+.PHONY : calculatePI.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -152,6 +176,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+merge.obj: merge.cpp.obj
+.PHONY : merge.obj
+
+# target to build an object file
+merge.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/merge.cpp.obj
+.PHONY : merge.cpp.obj
+
+merge.i: merge.cpp.i
+.PHONY : merge.i
+
+# target to preprocess a source file
+merge.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/merge.cpp.i
+.PHONY : merge.cpp.i
+
+merge.s: merge.cpp.s
+.PHONY : merge.s
+
+# target to generate assembly for a file
+merge.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/merge.cpp.s
+.PHONY : merge.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,9 +209,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Data_structure_experiments
+	@echo ... calculatePI.obj
+	@echo ... calculatePI.i
+	@echo ... calculatePI.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... merge.obj
+	@echo ... merge.i
+	@echo ... merge.s
 .PHONY : help
 
 

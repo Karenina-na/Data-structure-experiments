@@ -44,19 +44,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Code\cmake\bin\cmake.exe
+CMAKE_COMMAND = D:\Environment\cmake\bin\cmake.exe
 
 # The command to remove a file.
-RM = C:\Code\cmake\bin\cmake.exe -E rm -f
+RM = D:\Environment\cmake\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\WeiZixiang\Desktop\Data-structure-experiments
+CMAKE_SOURCE_DIR = D:\code\c++\Data-structure-experiments
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\WeiZixiang\Desktop\Data-structure-experiments\cmake-build-debug
+CMAKE_BINARY_DIR = D:\code\c++\Data-structure-experiments\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -80,14 +80,14 @@ clean: CMakeFiles/Data_structure_experiments.dir/clean
 CMakeFiles/Data_structure_experiments.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_structure_experiments.dir\build.make CMakeFiles/Data_structure_experiments.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\WeiZixiang\Desktop\Data-structure-experiments\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target Data_structure_experiments"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\code\c++\Data-structure-experiments\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4 "Built target Data_structure_experiments"
 .PHONY : CMakeFiles/Data_structure_experiments.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Data_structure_experiments.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\WeiZixiang\Desktop\Data-structure-experiments\cmake-build-debug\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\code\c++\Data-structure-experiments\cmake-build-debug\CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Data_structure_experiments.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\WeiZixiang\Desktop\Data-structure-experiments\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\code\c++\Data-structure-experiments\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/Data_structure_experiments.dir/rule
 
 # Convenience name for target.
