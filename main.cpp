@@ -4,7 +4,7 @@
 
 int main() {
 //    merge();
-    calculatePI();
+//    calculatePI();
     return 0;
 }
 

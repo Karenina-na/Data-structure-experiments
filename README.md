@@ -10,8 +10,14 @@
 - GDB 12.1
 - CLion 2023.1
 
-## run
+## Change Function
 
+if you want to change the function, you can change the `main.cpp` file.
+
+## Notice
+The project directory should not contain chinese characters.
+
+## run
 compile
 
 ```shell
