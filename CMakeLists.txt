@@ -2,6 +2,10 @@ cmake_minimum_required(VERSION 3.25)
 
 project(Data_structure_experiments)
 
+# 设置C++标准
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
 # 编译器
 set(CMAKE_CXX_COMPILER "g++")
 set(CMAKE_C_COMPILER "gcc")

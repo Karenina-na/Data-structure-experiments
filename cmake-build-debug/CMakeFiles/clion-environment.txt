@@ -1,4 +1,0 @@
-ToolSet: w64 10.0 (local)@D:\Environment\MinGW-64
-Options: 
-
-Options:
