@@ -33,3 +33,4 @@
 
 # cmake
 /cmake-build-debug-mingw
+/.idea
