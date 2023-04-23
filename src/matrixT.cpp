@@ -1,13 +1,9 @@
-#include <iostream>
-#include <math.h>
-#include "include/Function.h"
-#include <iterator>
-#include <vector>
-#include <string>
-#include <stdio.h>
-#include <string.h>
-# define MAXSIZE 1000
+//
+// Created by 15399 on 2023/4/23.
+//
+#include "../include/Function.h"
 
+//# define MAXSIZE 1000
 //struct triple {
 //    int row;
 //    int col;
@@ -15,7 +11,7 @@
 //};
 //
 //class SparseMatrix {
-//    public:
+//public:
 //    int row;
 //    int col;
 //    int num;
@@ -97,13 +93,14 @@
 //        }
 //    }
 //};
-
-
-int main() {
-//    merge();
-//    calculatePI();
-//    transpose();
-    add();
-    return 0;
+void transpose(){
+    int n, m;
+    std::cin >> n >> m;
+    SparseMatrix matrix(n, m);
+    int row, col, value;
+    while (std::cin >> row >> col >> value && row!=0 && col!=0 && value!=0) {
+        matrix.append(row, col, value);
+    }
+    matrix.transpose();
+    matrix.print();
 }
-
