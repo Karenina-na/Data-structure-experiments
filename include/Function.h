@@ -6,7 +6,6 @@
 #define DATA_STRUCTURE_EXPERIMENTS_FUNCTION_H
 #include <iostream>
 #include <math.h>
-# define MAXSIZE 1000
 #endif //DATA_STRUCTURE_EXPERIMENTS_FUNCTION_H
 
 void calculatePI();
@@ -194,7 +193,7 @@ public:
     int row;
     int col;
     int num;
-    triple data[MAXSIZE];
+    triple data[1000];
     SparseMatrix(int row, int col):row(row), col(col), num(0) {}
     ~SparseMatrix() {}
     void append(int row, int col, int value) {
