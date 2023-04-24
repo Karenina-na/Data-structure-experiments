@@ -2,7 +2,6 @@
 // Created by 15399 on 2023/4/23.
 //
 #include "../include/Function.h"
-
 //# define MAXSIZE 1000
 //struct triple {
 //    int row;
@@ -93,14 +92,23 @@
 //        }
 //    }
 //};
-void transpose(){
+
+void addTriple(){
     int n, m;
+    int l1, l2;
     std::cin >> n >> m;
-    SparseMatrix matrix(n, m);
+    SparseMatrixTriple matrix1(n, m);
+    SparseMatrixTriple matrix2(n, m);
+    std::cin >> l1 >> l2;
     int row, col, value;
-    while (std::cin >> row >> col >> value && row!=0 && col!=0 && value!=0) {
-        matrix.append(row, col, value);
+    for (int i=0;i<l1;i++){
+        std::cin >> row >> col >> value;
+        matrix1.append(row, col, value);
     }
-    matrix.transpose();
-    matrix.print();
+    for (int i=0;i<l2;i++){
+        std::cin >> row >> col >> value;
+        matrix2.append(row, col, value);
+    }
+    SparseMatrixTriple *matrix3 = matrix1.add(matrix2);
+    matrix3->print();
 }
