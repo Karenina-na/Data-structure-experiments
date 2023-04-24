@@ -105,7 +105,46 @@ public:
         return c;
     }
     SparseMatrixCrossList * multiple(SparseMatrixCrossList &b){
-
+        // c = a * b
+        SparseMatrixCrossList * c = new SparseMatrixCrossList(this->rowNum, b.colNum);
+        // 行指针遍历
+        for (int i = 0; i < rowNum; i++){
+            // a的第i行头指针
+            CrossListNode * a_rnext = this->rhead[i];
+            if (a_rnext == nullptr){
+                continue;
+            }
+            // 列指针遍历
+            for (int j = 0; j < colNum; j++){
+                int result = 0;
+                // b的第j列头指针
+                CrossListNode * temp = a_rnext;
+                CrossListNode * b_cnext = b.chead[j];
+                if (a_rnext == nullptr){
+                    continue;
+                }
+                while (temp != nullptr && b_cnext != nullptr){
+                    // 相同行列
+                    if (temp->col == b_cnext->row){
+                        result += temp->data * b_cnext->data;
+                        temp = temp->rnext;
+                        b_cnext = b_cnext->cnext;
+                    }
+                    // a列号小于b行号
+                    else if (temp->col < b_cnext->row){
+                        temp = temp->rnext;
+                    }
+                    // a列号大于b行号
+                    else{
+                        b_cnext = b_cnext->cnext;
+                    }
+                }
+                if (result != 0){
+                    c->append(i, j, result);
+                }
+            }
+        }
+        return c;
     }
     void print(){
         for (int i = 0; i < rowNum; ++i) {
@@ -139,6 +178,8 @@ int main() {
         std::cin>>row>>col>>data;
         b.append(row-1,col-1,data);
     }
+    SparseMatrixCrossList * c = a.multiple(b);
+    c->print();
     return 0;
 }
 
