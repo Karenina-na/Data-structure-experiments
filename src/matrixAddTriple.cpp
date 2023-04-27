@@ -9,14 +9,14 @@
 //    int value;
 //};
 //
-//class SparseMatrix {
+//class SparseMatrixTriple {
 //public:
 //    int row;
 //    int col;
 //    int num;
-//    triple data[MAXSIZE];
-//    SparseMatrix(int row, int col):row(row), col(col), num(0) {}
-//    ~SparseMatrix() {}
+//    triple data[1000];
+//    SparseMatrixTriple(int row, int col): row(row), col(col), num(0) {}
+//    ~SparseMatrixTriple() {}
 //    void append(int row, int col, int value) {
 //        //添加
 //        data[num].row = row;
@@ -39,9 +39,9 @@
 //            data[i].col = temp;
 //        }
 //    }
-//    SparseMatrix* add(SparseMatrix &b){
+//    SparseMatrixTriple* add(SparseMatrixTriple &b){
 //        //加法
-//        SparseMatrix *c = new SparseMatrix(row, col);
+//        SparseMatrixTriple *c = new SparseMatrixTriple(row, col);
 //        //双指针加法
 //        int i=0,j=0;
 //        while (i<num && j<b.num) {
@@ -92,7 +92,6 @@
 //        }
 //    }
 //};
-
 void addTriple(){
     int n, m;
     int l1, l2;
