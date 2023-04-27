@@ -98,7 +98,7 @@ void transpose(){
     std::cin >> n >> m;
     SparseMatrixTriple matrix(n, m);
     int row, col, value;
-    while (std::cin >> row >> col >> value && row!=0 && col!=0 && value!=0) {
+    while (std::cin >> row >> col >> value && (row!=0 || col!=0 || value!=0)) {
         matrix.append(row, col, value);
     }
     matrix.transpose();
