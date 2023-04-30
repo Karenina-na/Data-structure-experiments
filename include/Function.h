@@ -13,6 +13,7 @@ void merge();
 void transpose();
 void addTriple();
 void addCrossList();
+void multipleCrossList();
 
 //双向链表
 struct LinkNode {
@@ -288,8 +289,8 @@ class SparseMatrixCrossList{
 public:
     int rowNum;
     int colNum;
-    CrossListNode * rhead[1000]={nullptr};
-    CrossListNode * chead[1000]={nullptr};
+    CrossListNode * rhead[10000]={nullptr};
+    CrossListNode * chead[10000]={nullptr};
     SparseMatrixCrossList(int row, int col): rowNum(row), colNum(col){}
     ~SparseMatrixCrossList(){
         //行删除
@@ -298,15 +299,6 @@ public:
             while (rnext!= nullptr){
                 CrossListNode * temp = rnext;
                 rnext = rnext->rnext;
-                delete temp;
-            }
-        }
-        //列删除
-        for (int i = 0; i < colNum; ++i) {
-            CrossListNode * cnext = this->chead[i];
-            while (cnext!= nullptr){
-                CrossListNode * temp = cnext;
-                cnext = cnext->cnext;
                 delete temp;
             }
         }
@@ -379,11 +371,53 @@ public:
         }
         return c;
     }
+    SparseMatrixCrossList * multiple(SparseMatrixCrossList &b){
+        // c = a * b
+        SparseMatrixCrossList * c = new SparseMatrixCrossList(this->rowNum, b.colNum);
+        // 行指针遍历
+        for (int i = 0; i <= this->rowNum; i++){
+            // a的第i行头指针
+            CrossListNode * a_rnext = this->rhead[i];
+            if (a_rnext == nullptr){
+                continue;
+            }
+            // 列指针遍历
+            for (int j = 0; j <= b.colNum; j++){
+                // b的第j列头指针
+                CrossListNode * temp = a_rnext;
+                CrossListNode * b_cnext = b.chead[j];
+                if (b_cnext == nullptr){
+                    continue;
+                }
+                int result = 0;
+                while (temp != nullptr && b_cnext != nullptr){
+                    // 相同行列
+                    if (temp->col == b_cnext->row){
+                        result += temp->data * b_cnext->data;
+                        temp = temp->rnext;
+                        b_cnext = b_cnext->cnext;
+                    }
+                        // a列号小于b行号
+                    else if (temp->col < b_cnext->row){
+                        temp = temp->rnext;
+                    }
+                        // a列号大于b行号
+                    else{
+                        b_cnext = b_cnext->cnext;
+                    }
+                }
+                if (result != 0){
+                    c->append(i, j, result);
+                }
+            }
+        }
+        return c;
+    }
     void print(){
-        for (int i = 0; i < rowNum; ++i) {
+        for (int i = 0; i <= rowNum; ++i) {
             CrossListNode * rnext = this->rhead[i];
             while (rnext!= nullptr){
-                std::cout<<rnext->row+1<<" "<<rnext->col+1<<" "<<rnext->data<<std::endl;
+                std::cout<<rnext->row<<" "<<rnext->col<<" "<<rnext->data<<std::endl;
                 rnext = rnext->rnext;
             }
         }

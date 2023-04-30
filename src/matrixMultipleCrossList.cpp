@@ -1,5 +1,5 @@
 //
-// Created by 15399 on 2023/4/24.
+// Created by 15399 on 2023/4/30.
 //
 #include "../include/Function.h"
 //struct CrossListNode{
@@ -149,22 +149,23 @@
 //    }
 //};
 
-void addCrossList(){
-    int n,m;
-    int num1,num2;
-    std::cin>>n>>m>>num1>>num2;
-    SparseMatrixCrossList a = SparseMatrixCrossList(n, m);
-    for (int i=0;i<num1;i++){
-        int row,col,data;
-        std::cin>>row>>col>>data;
-        a.append(row,col,data);
+void multipleCrossList(){
+    int row, col, value;
+    //a
+    int n1,m1;
+    std::cin>>n1>>m1;
+    SparseMatrixCrossList a = SparseMatrixCrossList(n1, m1);
+    while (std::cin >> row >> col >> value && (row!=0 || col!=0 || value!=0)) {
+        a.append(row,col,value);
     }
-    SparseMatrixCrossList b = SparseMatrixCrossList(n, m);
-    for (int i=0;i<num2;i++){
-        int row,col,data;
-        std::cin>>row>>col>>data;
-        b.append(row,col,data);
+    //b
+    int n2,m2;
+    std::cin>>n2>>m2;
+    SparseMatrixCrossList b = SparseMatrixCrossList(n1, m2);
+    while (std::cin >> row >> col >> value && (row!=0 || col!=0 || value!=0)) {
+        b.append(row,col,value);
     }
-    SparseMatrixCrossList * c = a.add(b);
+    //c
+    SparseMatrixCrossList * c = a.multiple(b);
     c->print();
 }
