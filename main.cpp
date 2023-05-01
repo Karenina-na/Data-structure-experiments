@@ -1,14 +1,11 @@
-#include <iostream>
 #include "include/Function.h"
-
-
 
 int main() {
 //    merge();
 //    calculatePI();
 //    transpose();
 //    addTriple();
-    addCrossList();
+//    addCrossList();
 //    multipleCrossList();
     return 0;
 }
