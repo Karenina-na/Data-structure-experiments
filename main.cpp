@@ -7,6 +7,6 @@ int main() {
 //    addTriple();
 //    addCrossList();
 //    multipleCrossList();
-    huffman();
+//    huffman();
+    return 0;
 }
-

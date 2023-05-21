@@ -5,7 +5,13 @@
 #ifndef DATA_STRUCTURE_EXPERIMENTS_FUNCTION_H
 #define DATA_STRUCTURE_EXPERIMENTS_FUNCTION_H
 //引入所有头文件
-#include <bits/stdc++.h>
+//#include <bits/stdc++.h>
+#include<iostream>
+#include<stack>
+#include<vector>
+#include<algorithm>
+#include<queue>
+#include<string>
 #endif //DATA_STRUCTURE_EXPERIMENTS_FUNCTION_H
 
 void calculatePI();
