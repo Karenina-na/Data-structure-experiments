@@ -2,7 +2,7 @@
 // Created by 15399 on 2023/6/2.
 //
 #include "../include/Function.h"
-//// Dij算法结果
+// Dij算法结果
 //struct DijResult{
 //    int *dist;
 //    int *path;
@@ -133,7 +133,7 @@
 //        }
 //    }
 //};
-void dijNodeShortestPath(){
+void floydNodeShortestPath(){
     int n;
     std::cin >> n;
     UndirectedGraph graph(n);
@@ -144,17 +144,16 @@ void dijNodeShortestPath(){
             graph.insertEdge(i, j, weight);
         }
     }
-    int v1, v2;
-    std::cin >> v1 >> v2;
-    DijResult *res = graph.Dijkstra(v1);
-    int node = v2;
-    auto *s = new std::stack<int>;
-    while (node != -1){
-        s->push(node);
-        node = res->path[node];
+    int m;
+    std::cin >> m;
+    auto *node = new std::vector<std::pair<int, int>>(m);
+    for (int i = 0; i < m; ++i) {
+        int index, weight;
+        std::cin >> index >> weight;
+        (*node)[i] = std::make_pair(index, weight);
     }
-    while (!s->empty()){
-        std::cout << s->top() << std::endl;
-        s->pop();
+    FloydResult *result = graph.Floyd();
+    for (int i = 0; i < m; ++i) {
+        std::cout << result->dist[(*node)[i].first][(*node)[i].second] << std::endl;
     }
 }

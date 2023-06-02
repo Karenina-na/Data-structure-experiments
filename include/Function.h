@@ -23,6 +23,7 @@ void multipleCrossList();
 void huffman();
 void singleNodeShortestPath();
 void dijNodeShortestPath();
+void floydNodeShortestPath();
 
 //双向链表
 struct LinkNode {
@@ -632,6 +633,11 @@ struct DijResult{
     int *dist;
     int *path;
 };
+// Floyd算法结果
+struct FloydResult{
+    int **dist;
+    int **path;
+};
 //无向赋权图
 class UndirectedGraph {
 private:
@@ -706,6 +712,36 @@ public:
             path[minIndex] = pathIndex;
         }
         DijResult *result = new DijResult;
+        result->dist = dist;
+        result->path = path;
+        return result;
+    }
+    FloydResult * Floyd(){
+        int **dist = new int*[this->vertexNum];
+        int **path = new int*[this->vertexNum];
+        for (int i = 0; i < this->vertexNum; ++i){
+            dist[i] = new int[this->vertexNum];
+            path[i] = new int[this->vertexNum];
+            for (int j = 0; j < this->vertexNum; ++j) {
+                dist[i][j] = this->matrix[i][j];
+                path[i][j] = this->Unreachable;
+                if (i==j){
+                    dist[i][j] = 0;
+                }
+            }
+        }
+        // i->k->j
+        for (int k = 0; k < this->vertexNum; ++k) {
+            for (int i = 0; i < this->vertexNum; ++i) {
+                for (int j = 0; j < this->vertexNum; ++j) {
+                    if (dist[i][k] + dist[k][j] < dist[i][j]){
+                        dist[i][j] = dist[i][k] + dist[k][j];
+                        path[i][j] = k;
+                    }
+                }
+            }
+        }
+        FloydResult *result = new FloydResult;
         result->dist = dist;
         result->path = path;
         return result;
