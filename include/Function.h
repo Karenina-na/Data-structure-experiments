@@ -21,6 +21,7 @@ void addTriple();
 void addCrossList();
 void multipleCrossList();
 void huffman();
+void SingleNodeShortestPath();
 
 //双向链表
 struct LinkNode {
@@ -621,6 +622,97 @@ private:
             code += "1";
             dfs(node->right,code);
             code.pop_back();
+        }
+    }
+};
+
+//无向赋权图
+//无向赋权图
+class UndirectedGraph {
+private:
+    int vertexNum; //顶点数
+    int edgeNum; //边数
+    int **matrix;
+    int Unreachable = 10000;
+public:
+    UndirectedGraph(int n){
+        this->matrix = new int*[n];
+        for (int i = 0; i < n; ++i) {
+            this->matrix[i] = new int[n];
+            for (int j = 0; j < n; ++j) {
+                this->matrix[i][j] = this->Unreachable;
+                if (i == j){
+                    this->matrix[i][j] = 0;
+                }
+            }
+        }
+        this->vertexNum = n;
+        this->edgeNum = 0;
+    }
+    ~UndirectedGraph(){
+        for (int i = 0; i < this->vertexNum; ++i) {
+            delete[] this->matrix[i];
+        }
+        delete[] this->matrix;
+    }
+    void insertEdge(int v1, int v2, int weight){
+        if (this->matrix[v1][v2] == this->Unreachable){
+            this->edgeNum++;
+        }
+        this->matrix[v1][v2] = weight;
+        this->matrix[v2][v1] = weight;
+        if (this->matrix[v1][v2] == this->Unreachable){
+            this->edgeNum--;
+        }
+    }
+    int* Dijkstra(int v){
+        int *dist = new int[this->vertexNum]; // 记录最短路径
+        bool *visited = new bool[this->vertexNum]; // 记录是否访问过
+        int *path = new int[this->vertexNum]; // 记录路径
+        for (int i = 0; i < this->vertexNum; ++i) {
+            dist[i] = this->matrix[v][i];
+            visited[i] = false;
+        }
+        visited[v] = true;
+        dist[v] = 0;
+        path[v] = -1;
+        int pathNum = 0, pathIndex = v;
+        while (true){
+            int min = this->Unreachable;
+            int minIndex = -1;
+            for (int i = 0; i < this->vertexNum; ++i) {
+                if (visited[i]){
+                    for (int j = 0; j < this->vertexNum; ++j) {
+                        if (!visited[j] && this->matrix[j][i] < min){
+                            min = this->matrix[j][i];
+                            minIndex = j;
+                        }
+                    }
+                }
+            }
+            if (minIndex == -1){
+                break;
+            }
+            pathNum+=min;
+            visited[minIndex] = true;
+            dist[minIndex] = pathNum;
+            path[minIndex] = pathIndex;
+            pathIndex = minIndex;
+        }
+        delete[] path;
+        delete[] visited;
+        return dist;
+    }
+    void printGraph(){
+        for (int i = 0; i < this->vertexNum; ++i) {
+            for (int j = 0; j < this->vertexNum; ++j) {
+                if (this->matrix[i][j] == this->Unreachable){
+                    std::cout << "n" << " ";
+                } else{
+                    std::cout << this->matrix[i][j] << " ";
+                }
+            }
+            std::cout << std::endl;
         }
     }
 };
