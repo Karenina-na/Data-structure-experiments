@@ -21,7 +21,8 @@ void addTriple();
 void addCrossList();
 void multipleCrossList();
 void huffman();
-void SingleNodeShortestPath();
+void singleNodeShortestPath();
+void dijNodeShortestPath();
 
 //双向链表
 struct LinkNode {
@@ -626,7 +627,11 @@ private:
     }
 };
 
-//无向赋权图
+// Dij算法结果
+struct DijResult{
+    int *dist;
+    int *path;
+};
 //无向赋权图
 class UndirectedGraph {
 private:
@@ -665,7 +670,7 @@ public:
             this->edgeNum--;
         }
     }
-    int* Dijkstra(int v){
+    DijResult * Dijkstra(int v){
         int *dist = new int[this->vertexNum]; // 记录最短路径
         bool *visited = new bool[this->vertexNum]; // 记录是否访问过
         int *path = new int[this->vertexNum]; // 记录路径
@@ -676,15 +681,18 @@ public:
         visited[v] = true;
         dist[v] = 0;
         path[v] = -1;
-        int pathNum = 0, pathIndex = v;
         while (true){
             int min = this->Unreachable;
             int minIndex = -1;
+            int pathNum = 0;
+            int pathIndex = 0;
             for (int i = 0; i < this->vertexNum; ++i) {
                 if (visited[i]){
                     for (int j = 0; j < this->vertexNum; ++j) {
-                        if (!visited[j] && this->matrix[j][i] < min){
-                            min = this->matrix[j][i];
+                        if (!visited[j] && this->matrix[i][j] + dist[i] < min + dist[pathIndex]){
+                            pathNum = dist[i];
+                            pathIndex = i;
+                            min = this->matrix[i][j];
                             minIndex = j;
                         }
                     }
@@ -693,15 +701,14 @@ public:
             if (minIndex == -1){
                 break;
             }
-            pathNum+=min;
             visited[minIndex] = true;
-            dist[minIndex] = pathNum;
+            dist[minIndex] = pathNum + min;
             path[minIndex] = pathIndex;
-            pathIndex = minIndex;
         }
-        delete[] path;
-        delete[] visited;
-        return dist;
+        DijResult *result = new DijResult;
+        result->dist = dist;
+        result->path = path;
+        return result;
     }
     void printGraph(){
         for (int i = 0; i < this->vertexNum; ++i) {

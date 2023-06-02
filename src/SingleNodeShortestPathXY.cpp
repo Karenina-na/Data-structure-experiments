@@ -3,7 +3,7 @@
 //
 // 单节点最短路径
 #include "../include/Function.h"
-void SingleNodeShortestPath(){
+void singleNodeShortestPath(){
     int n;
     std::cin >> n;
     UndirectedGraph graph(n);
@@ -14,8 +14,8 @@ void SingleNodeShortestPath(){
             graph.insertEdge(i, j, weight);
         }
     }
-    int *dist = graph.Dijkstra(0);
+    DijResult *res = graph.Dijkstra(0);
     for (int i = 0; i < n; ++i) {
-        std::cout << dist[i] << std::endl;
+        std::cout << res->dist[i] << std::endl;
     }
 }

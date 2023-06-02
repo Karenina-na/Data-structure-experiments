@@ -8,6 +8,7 @@ int main() {
 //    addCrossList();
 //    multipleCrossList();
 //    huffman();
-//    SingleNodeShortestPath();
+//    singleNodeShortestPath();
+//    dijNodeShortestPath();
     return 0;
 }
