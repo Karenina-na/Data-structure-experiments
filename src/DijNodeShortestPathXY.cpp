@@ -2,7 +2,7 @@
 // Created by 15399 on 2023/6/2.
 //
 #include "../include/Function.h"
-//// Dij算法结果
+// Dij算法结果
 //struct DijResult{
 //    int *dist;
 //    int *path;
@@ -97,10 +97,16 @@
 //            dist[i] = new int[this->vertexNum];
 //            path[i] = new int[this->vertexNum];
 //            for (int j = 0; j < this->vertexNum; ++j) {
-//                dist[i][j] = this->matrix[i][j];
-//                path[i][j] = this->Unreachable;
+//                if (this->matrix[i][j] == this->Unreachable){
+//                    dist[i][j] = this->Unreachable;
+//                    path[i][j] = -1;
+//                } else {
+//                    dist[i][j] = this->matrix[i][j];
+//                    path[i][j] = i;
+//                }
 //                if (i==j){
 //                    dist[i][j] = 0;
+//                    path[i][j] = -1;
 //                }
 //            }
 //        }

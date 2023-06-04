@@ -10,6 +10,7 @@ int main() {
 //    huffman();
 //    singleNodeShortestPath();
 //    dijNodeShortestPath();
-//    floydNodeShortestPath();
+//    floydNodeShortestPathXY();
+    floydNodeShortestPath();
     return 0;
 }

@@ -23,6 +23,7 @@ void multipleCrossList();
 void huffman();
 void singleNodeShortestPath();
 void dijNodeShortestPath();
+void floydNodeShortestPathXY();
 void floydNodeShortestPath();
 
 //双向链表
@@ -723,10 +724,16 @@ public:
             dist[i] = new int[this->vertexNum];
             path[i] = new int[this->vertexNum];
             for (int j = 0; j < this->vertexNum; ++j) {
-                dist[i][j] = this->matrix[i][j];
-                path[i][j] = this->Unreachable;
+                if (this->matrix[i][j] == this->Unreachable){
+                    dist[i][j] = this->Unreachable;
+                    path[i][j] = -1;
+                } else {
+                    dist[i][j] = this->matrix[i][j];
+                    path[i][j] = i;
+                }
                 if (i==j){
                     dist[i][j] = 0;
+                    path[i][j] = -1;
                 }
             }
         }

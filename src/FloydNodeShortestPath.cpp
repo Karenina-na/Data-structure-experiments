@@ -2,7 +2,7 @@
 // Created by 15399 on 2023/6/2.
 //
 #include "../include/Function.h"
-//// Dij算法结果
+// Dij算法结果
 //struct DijResult{
 //    int *dist;
 //    int *path;
@@ -139,7 +139,7 @@
 //        }
 //    }
 //};
-void floydNodeShortestPathXY(){
+void floydNodeShortestPath(){
     int n;
     std::cin >> n;
     UndirectedGraph graph(n);
@@ -159,7 +159,18 @@ void floydNodeShortestPathXY(){
         (*node)[i] = std::make_pair(index, weight);
     }
     FloydResult *result = graph.Floyd();
-    for (int i = 0; i < m; ++i) {
-        std::cout << result->dist[(*node)[i].first][(*node)[i].second] << std::endl;
+    auto *s = new std::stack<int>();
+    for (int i = 0; i < m; ++i){
+        int index = (*node)[i].first;
+        int k = (*node)[i].second;
+        while (k != -1){
+            s->push(k);
+            k = result->path[index][k];
+        }
+        while (!s->empty()){
+            std::cout << s->top() << std::endl;
+            s->pop();
+        }
     }
+    delete s;
 }
